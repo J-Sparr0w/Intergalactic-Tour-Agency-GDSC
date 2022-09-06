@@ -105,4 +105,25 @@ line-height: 88px;
   
       font-size: 50px;
    }
-   
+   .button:hover{
+      background-color: azure;
+   }
+
+   .down-icon{
+      position: absolute;
+
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+
+   }
+
+   .down-icon img{
+      width: 35px;
+
+      transition:  0.5s;
+   }
+   .down-icon img:hover{
+      transform: translateY(-20%);
+      
+   }
