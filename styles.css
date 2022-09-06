@@ -19,7 +19,24 @@
 
        font-size: 20px;
        overflow-x: hidden;
+
+       scroll-behavior: smooth;
     }
+    ::-webkit-scrollbar {
+      width: 10px;
+      transition-property: width;
+      transition: 300ms ease-in;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgb(129, 129, 129);
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgb(41, 41, 41);
+    }
+    
+    ::-webkit-scrollbar-track {
+      backdrop-filter: blur(0.4rem);
+    }    
    
 header{
    width: 100%;
@@ -118,18 +135,35 @@ line-height: 88px;
       left: 50%;
       transform: translateX(-50%);
 
+      display: flex;
+
+      justify-content: center;
+      align-items: center;
+
+width: 60px;
+height: 60px;
+     
+      border-radius: 50%;
+      transition:  0.5s;
+
+   }
+
+   .down-icon:hover{
+      transform: translate(-50%,-40%);
+      background-color: rgba(65, 65, 65, 0.715)
+   }
+
+   .down-icon:active{
+      background-color: azure;
    }
 
    .down-icon img{
       width: 35px;
+      cursor: pointer;
 
       transition:  0.5s;
    }
-   .down-icon img:hover{
-      transform: translateY(-20%);
-      cursor: pointer;
-   }
-
+  
    .planet-1{
       position: relative;
       width: 100vw;
@@ -159,4 +193,63 @@ line-height: 88px;
       background-position: center;
       background-repeat: no-repeat;
       background-size:cover;
+   }
+
+
+   .heading{
+      margin: 15vh 30vh;
+
+
+      display: inline-block;
+      text-align: center;
+      font-size: 70px;
+      font-weight: 100;
+      /* background-color: aliceblue; */
+   }
+   .heading {
+      margin-bottom: -40px;
+   }
+   .heading h3{
+transform: translateY(-40%);
+   }
+
+   .content{
+      font-size: 25px;
+      margin: 5vh 10vw;
+      max-width: 40vw;
+
+   }
+   .heading-r{
+      position: absolute;
+      right: 10vw;
+      top: 10vh;
+
+      display: flex;
+      flex-direction:column ;
+      text-align: center;
+
+      width: 50vw;
+
+      font-size: 70px;
+      font-weight: 100;
+
+   }
+   
+   .heading-r h3{
+transform: translateY(-40%);
+   }
+
+   .content-r{
+      position: absolute;
+      top: 40vh;
+      right: 20vw;
+
+      width: 30vw;
+      font-size: 25px;
+      max-width: 40vw;
+   }
+
+   .team{
+      width: 100vw;
+      height: 100vh;
    }
